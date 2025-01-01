@@ -60,7 +60,7 @@ with tab1:
 
     base_year_input = st.number_input(
         "Base Year (YYYY) for Forecast:",
-        value=2024,
+        value=2025,
         min_value=2000,
         max_value=2100,
         key="base_year_key"
@@ -229,7 +229,7 @@ with tab1:
             st.markdown("**Bar Chart (2-Year Forecast)**")
             st.bar_chart(df_future_2yr["predicted_price"])
     st.markdown("---")
-    st.write("© 2024 | Pranav Kumar. All Rights Reserved.")
+    st.write("© 2025 | Pranav Kumar. All Rights Reserved.")
 
 
 # -----------------------------------------------------------------------------
@@ -248,7 +248,7 @@ with tab2:
             st.image("Images/Processed_data_snippet.png", width=650)
 
     st.markdown("---")
-    st.write("© 2024 | Pranav Kumar. All Rights Reserved.")
+    st.write("© 2025 | Pranav Kumar. All Rights Reserved.")
 
 # -----------------------------------------------------------------------------
 # TAB 3: MODEL INFO
@@ -286,5 +286,5 @@ with tab3:
     st.info("For further suggestions or collaboration or questions, feel free to reach out at kumar2pranav@gmail.com")
     
     st.markdown("---")
-    st.write("© 2024 | Pranav Kumar. All Rights Reserved.")
+    st.write("© 2025 | Pranav Kumar. All Rights Reserved.")
 
