@@ -1,0 +1,11 @@
+data:
+  raw_data: "data/raw/historical_land_prices.csv"
+  processed_data: "data/processed/processed_land_data.csv"
+
+models:
+  directory: "models"
+
+hyperparameters:
+  random_forest:
+    n_estimators: 50
+    random_state: 42
