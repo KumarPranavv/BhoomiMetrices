@@ -53,8 +53,8 @@ with tab1:
 
     price_input = st.number_input(
         "Current Land Price (in INR) per sq ft:",
-        value=500.0,
-        step=100.0,
+        value=5000.0,
+        step=500.0,
         key="price_input_key"
     )
 
