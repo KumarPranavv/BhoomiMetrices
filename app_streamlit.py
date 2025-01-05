@@ -19,7 +19,7 @@ st.set_page_config(
 # -----------------------------------------------------------------------------
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    st.image("Images/LandLogo.png", width=400)
+    st.image("Images/LandLogo.png", use_column_width=True)
 
 # -----------------------------------------------------------------------------
 # Title
@@ -53,6 +53,7 @@ with tab1:
 
     price_input = st.number_input(
         "Current Land Price(in INR) (per sq ft):",
+        min_value=500.0,
         value=5000.0,
         step=500.0,
         key="price_input_key"
