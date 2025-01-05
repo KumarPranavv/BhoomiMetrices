@@ -80,7 +80,7 @@ with tab1:
     if st.button("Predict", key="predict_main"):
         # Check if price_input < 500
         if price_input < 4000:
-            st.warning("Price must be at least 500. Please adjust your input.")
+            st.warning("Price must be at least 4000. Please adjust your input.")
         else:
             # -----------------------------------------------------------
             # SINGLE-POINT PREDICTION
