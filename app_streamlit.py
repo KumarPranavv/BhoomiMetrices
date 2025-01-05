@@ -51,13 +51,38 @@ with tab1:
         key="city_choice_key"
     )
 
-    price_input = st.number_input(
-        "Current Land Price(in INR) (per sq ft):",
-        min_value=500.0,
-        value=5000.0,
-        step=500.0,
-        key="price_input_key"
-    )
+    if st.button("Predict", key="predict_main"):
+    # 1) Check if price_input < 500
+    if price_input < 500:
+        # Show a warning message, and skip the model predictions
+        st.warning("Price must be at least 500. Please adjust your input.")
+    else:
+        # 2) Proceed with your model logic
+        df_input = pd.DataFrame([{
+            "price": price_input,
+            "year": base_year_input,
+            "month": base_month_input,
+            "city": city_choice
+        }])
+        
+        # Convert city to dummies, align columns, etc.
+        # ...
+        
+        pred_1yr = model_1yr.predict(X_input_1yr)[0]
+        pred_2yr = model_2yr.predict(X_input_2yr)[0]
+
+        # Show results
+        st.subheader("Single-Point Forecast")
+        single_col1, single_col2 = st.columns(2)
+        with single_col1:
+            st.metric("1-Year Price", f"{pred_1yr:,.2f} per sq ft")
+        with single_col2:
+            st.metric("2-Year Price", f"{pred_2yr:,.2f} per sq ft")
+
+        st.success("Prediction complete!")
+        
+        # ... and so on for the 12-month and 24-month forecasts
+
 
     base_year_input = st.number_input(
         "Base Year (YYYY) for Forecast:",
