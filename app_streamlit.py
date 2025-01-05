@@ -61,7 +61,7 @@ with tab1:
     base_year_input = st.number_input(
         "Base Year (YYYY) for Forecast:",
         value=2025,  # or pick any default
-        min_value=2000,
+        min_value=2024,
         max_value=2100,
         key="base_year_key"
     )
@@ -79,7 +79,7 @@ with tab1:
     # 3) Predict Button
     if st.button("Predict", key="predict_main"):
         # Check if price_input < 500
-        if price_input < 500:
+        if price_input < 4000:
             st.warning("Price must be at least 500. Please adjust your input.")
         else:
             # -----------------------------------------------------------
