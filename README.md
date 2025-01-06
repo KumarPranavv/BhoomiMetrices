@@ -2,6 +2,7 @@
 **A sophisticated machine learning application that provides 1-year and 2-year land price forecasts based on current land price, location, and temporal factors.** <br>
 <img width="575" alt="Screenshot 2025-01-02 at 03 18 53" src="https://github.com/user-attachments/assets/58b4e736-60fa-4f85-b367-e64ebf5d09fc" />
 
+## Access it : https://bhoomimetrices.streamlit.app
 ## Features
 
 * **Dual Forecast Models:** Implements both 1-year and 2-year prediction models <br>
